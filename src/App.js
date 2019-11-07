@@ -8,6 +8,7 @@ import {Switch, Route} from 'react-router-dom'
 import CameraScreen from './containers/camera';
 import DaftarStok from './containers/daftar-stok';
 import PosScreen from './containers/pos';
+import ProfileScreen from './containers/profile';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/camera" component={CameraScreen}/>
       <Route path="/daftar-stok" component={DaftarStok}/>
       <Route path="/pos" component={PosScreen}/>
+      <Route path="/profile" component={ProfileScreen}/>
     </Switch>
   );
 }

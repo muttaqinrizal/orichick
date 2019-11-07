@@ -1,11 +1,25 @@
 import React, {Component} from 'react';
 import {Container, Typography} from '@material-ui/core'
 import Logo from '../../assets/logo.png'
+import {Redirect} from 'react-router-dom'
 
 class SplashScreen extends Component {
-    state = {  }
+    state = { 
+        redirect : false
+     }
+
+     componentDidMount(){
+         setTimeout(()=>this.setState({
+                 redirect: true
+             }),2000
+         )
+     }
     render() { 
+        if(this.state.redirect){
+            return <Redirect to="/login"/>
+        }
         return ( 
+    
         <React.Fragment>
             <Container maxWidth="xs" style={styles.containerStyle}>
                 <div style={styles.logoStyle}>

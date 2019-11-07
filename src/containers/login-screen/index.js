@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Container, TextField, Button } from '@material-ui/core'
 import Logo from '../../assets/logo.png'
+import {Link} from 'react-router-dom'
 
 class LoginScreen extends Component {
     state = {  }
@@ -13,7 +14,7 @@ class LoginScreen extends Component {
                         <TextField label="username" variant="outlined" fullWidth margin="normal"></TextField>
                         <TextField label="password" type="password" variant="outlined" fullWidth margin="normal"></TextField>
                     </form>
-                    <Button variant="contained" style={styles.btnStyle}>Masuk</Button>
+                    <Button component={Link} to="/pos" variant="contained" style={styles.btnStyle}>Masuk</Button>
                 </div>
             </Container>
         </React.Fragment> );
