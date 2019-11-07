@@ -6,7 +6,7 @@ import {Redirect} from 'react-router-dom'
 class SplashScreen extends Component {
     state = { 
         redirect : false
-     }
+    }
 
      componentDidMount(){
          setTimeout(()=>this.setState({
